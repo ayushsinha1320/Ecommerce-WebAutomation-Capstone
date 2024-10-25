@@ -1,0 +1,35 @@
+name: PR Approval Workflow
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  check-approval:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check for Peer and Maintainer Approval
+        uses: actions/github-script@v3
+        with:
+          script: |
+            const { data: reviews } = await github.pulls.listReviews({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.payload.pull_request.number,
+            });
+
+            // Define the required peer and maintainer usernames
+            const peerUsername = 'ayushsinha1320';
+            const maintainerUsername = 'sushantad-tv';
+            
+
+            // Check if both peer and maintainer approvals are present
+            const peerApproved = reviews.some(review => review.user.login === peerUsername && review.state === 'APPROVED');
+            const maintainerApproved = reviews.some(review => review.user.login === maintainerUsername && review.state === 'APPROVED');
+
+            if (!peerApproved || !maintainerApproved) {
+              core.setFailed("Both peer and maintainer approval are required for this PR to be merged.");
+            } else {
+              console.log("PR has the necessary approvals.");
+            }
