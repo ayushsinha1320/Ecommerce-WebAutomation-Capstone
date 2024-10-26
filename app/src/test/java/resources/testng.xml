@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+    <test name="LoginTests">
+        <classes>
+            <class name="openMRS.webautomation.LoginTest">
+                <methods>
+                    <include name="basicTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
