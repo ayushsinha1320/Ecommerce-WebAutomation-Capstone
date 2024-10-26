@@ -1,1 +1,1 @@
-# Ecommerce-WebAutomation-Capstone
+# OpenMRS-WebAutomation
