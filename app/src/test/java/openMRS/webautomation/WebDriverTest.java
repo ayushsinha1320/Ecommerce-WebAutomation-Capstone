@@ -12,7 +12,7 @@ public class WebDriverTest {
 
     @Test
     public void TestHello(){
-        System.out.println("Hello from test - ayush branch");
+        System.out.println("Hello from test");
     }
 
 
