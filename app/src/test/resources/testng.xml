@@ -2,11 +2,7 @@
 <suite name="Suite">
     <test name="LoginTests">
         <classes>
-            <class name="openMRS.webautomation.WebDriverTest">
-                <methods>
-                    <include name="TestHello"/>
-                </methods>
-            </class>
+            <class name="openMRS.webautomation.WebDriverTest"/>
         </classes>
     </test>
 </suite>
