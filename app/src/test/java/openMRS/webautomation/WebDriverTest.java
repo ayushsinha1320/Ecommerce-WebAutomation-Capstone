@@ -1,6 +1,7 @@
 package openMRS.webautomation;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.testng.Assert;
 import org.testng.annotations.*;
 
 public class WebDriverTest {
@@ -11,9 +12,10 @@ public class WebDriverTest {
     }
 
     @Test
-    public void TestHello(){
+    public void TestHello() {
+        String actualTest = "Hello";
+        String expectedTest = "Hello";
+        Assert.assertEquals(actualTest, expectedTest);
         System.out.println("Hello from test");
     }
-
-
 }
