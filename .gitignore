@@ -6,3 +6,5 @@ build
 
 # Ignore TestNG test-output directory
 test-output
+
+.idea

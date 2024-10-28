@@ -7,6 +7,6 @@ public class EditRegistrationInformationTest extends BaseTest {
 
     @Test
     public void editDemographicsButton(){
-        driver.findElement(By.id("demographics-edit-link"))
+        driver.findElement(By.id("demographics-edit-link"));
     }
 }
