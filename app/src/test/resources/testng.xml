@@ -2,7 +2,8 @@
 <suite name="Suite">
     <test name="LoginTests">
         <classes>
-            <class name="openMRS.webautomation.WebDriverTest"/>
+          <class name="openMRS.webautomation.LoginTest"/>
+          <class name="openMRS.webautomation.RegisterAPatientTest"/>
         </classes>
     </test>
 </suite>
