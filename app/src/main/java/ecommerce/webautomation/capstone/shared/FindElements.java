@@ -18,11 +18,9 @@ public class FindElements {
         }
         return FindElements.elements;
     }
-
     public WebElement ByCSS(String cssLocator) {
         return driver.findElement(By.cssSelector(cssLocator));
     }
-
     public WebElement ByID(String elementId) {
         return driver.findElement(By.id(elementId));
     }
