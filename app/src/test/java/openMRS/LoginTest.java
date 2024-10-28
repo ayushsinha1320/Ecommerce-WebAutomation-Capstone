@@ -1,6 +1,6 @@
-package ecommerce.webautomation.capstone;
+package openMRS;
 
-import ecommerce.webautomation.capstone.pages.OpenMRSLoginPage;
+import openMRS.pages.OpenMRSLoginPage;
 import org.testng.annotations.Test;
 
 public class LoginTest extends BaseTest{

@@ -1,4 +1,4 @@
-package ecommerce.webautomation.capstone.shared;
+package openMRS.shared;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
