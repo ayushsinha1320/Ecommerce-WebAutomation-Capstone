@@ -1,8 +1,7 @@
-package ecommerce.webautomation.capstone.pages;
+package openMRS.pages;
 
-import ecommerce.webautomation.capstone.utils.ConfigReader;
 import org.openqa.selenium.WebDriver;
-import ecommerce.webautomation.capstone.shared.Actions;
+import openMRS.shared.Actions;
 
 public class HomePage {
     private static HomePage homePage = null;

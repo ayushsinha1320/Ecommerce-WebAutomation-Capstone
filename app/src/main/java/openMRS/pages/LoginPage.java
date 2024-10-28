@@ -1,4 +1,4 @@
-package ecommerce.webautomation.capstone.pages;
+package openMRS.pages;
 
 import com.opencsv.CSVReader;
 import com.opencsv.exceptions.CsvException;
