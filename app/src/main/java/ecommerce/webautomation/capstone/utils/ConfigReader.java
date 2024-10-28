@@ -7,7 +7,6 @@ public class ConfigReader {
     private static final String browser = "chromexz";
     //private static final String productName = "Alfa";
 
-
     public static String getBrowser() {
 
         return browser;
