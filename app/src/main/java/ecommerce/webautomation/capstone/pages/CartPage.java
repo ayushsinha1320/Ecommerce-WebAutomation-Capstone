@@ -14,7 +14,7 @@ public class CartPage {
     private static CartPage cartPage = null;
     private PageWaits pageWaits = null;
 
-    private static final Logger LOGGER = Logger.getLogger(ProductDescriptionPage.class.getName());
+   // private static final Logger LOGGER = Logger.getLogger(ProductDescriptionPage.class.getName());
 
     private CartPage(WebDriver driver) {
         this.driver = driver;

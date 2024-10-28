@@ -19,8 +19,5 @@ public class HomePage {
         return HomePage.homePage;
     }
 
-    public void goToHomePage() {
-        actions.navigateTo(ConfigReader.getBaseURL());
-        actions.Maximize();
-    }
+
 }
