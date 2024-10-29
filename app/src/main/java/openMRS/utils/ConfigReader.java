@@ -2,23 +2,14 @@ package openMRS.utils;
 
 
 public class ConfigReader {
-    //private static final String baseURL = "https://web-playground.ultralesson.com/";
     private static final String baseURL = "https://demo.openmrs.org/openmrs/login.htm";
-    private static final String browser = "chromexz";
-    //private static final String productName = "Alfa";
+    private static final String browser = "chrome";
 
     public static String getBrowser() {
-
         return browser;
     }
 
     public static String getBaseURL() {
         return baseURL;
     }
-
-
-    //public  static String getProductName(){
-    //    return productName;
-   // }
-
 }

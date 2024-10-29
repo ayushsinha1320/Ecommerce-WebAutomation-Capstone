@@ -25,6 +25,9 @@ public class FindElements {
     public WebElement ByID(String elementId) {
         return driver.findElement(By.id(elementId));
     }
+    public WebElement ByName(String elementName) {
+        return driver.findElement(By.name(elementName));
+    }
 
     public WebElement ByClass(String className) {
         return driver.findElement(By.className(className));
