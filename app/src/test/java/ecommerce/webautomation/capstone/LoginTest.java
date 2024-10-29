@@ -1,9 +1,9 @@
 package ecommerce.webautomation.capstone;
 
 import ecommerce.webautomation.capstone.pages.OpenMRSLoginPage;
-import ecommerce.webautomation.capstone.shared.PageWaits;
-import ecommerce.webautomation.capstone.utils.ConfigReader;
-import ecommerce.webautomation.capstone.utils.DriverCreator;
+import openMRS.shared.PageWaits;
+import openMRS.utils.ConfigReader;
+import openMRS.utils.DriverCreator;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;

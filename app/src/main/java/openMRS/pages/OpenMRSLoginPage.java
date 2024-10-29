@@ -1,7 +1,7 @@
-package ecommerce.webautomation.capstone.pages;
+package openMRS.pages;
 
-import ecommerce.webautomation.capstone.shared.Actions;
-import ecommerce.webautomation.capstone.shared.FindElements;
+import openMRS.shared.Actions;
+import openMRS.shared.FindElements;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 

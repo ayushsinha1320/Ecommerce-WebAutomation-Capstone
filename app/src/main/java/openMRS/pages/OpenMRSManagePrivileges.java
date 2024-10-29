@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class OpenMRSManagePrivileges {
+
     private static OpenMRSManagePrivileges managePrivilegesInstance;
     private WebDriver driver;
     private FindElements findElements;
