@@ -9,6 +9,9 @@ public class LoginTest extends BaseTest{
     public void testPDP() {
         OpenMRSLoginPage loginPage = OpenMRSLoginPage.getInstance(driver);
         loginPage.login("admin","Admin123");
+
+
+
     }
 
 }
