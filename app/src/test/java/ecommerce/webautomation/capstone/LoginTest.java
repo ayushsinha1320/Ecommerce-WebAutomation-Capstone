@@ -22,17 +22,20 @@ public class LoginTest {
         //this.waits = PageWaits.getPageWaitsObject(this.driver);
     }
 
-    @Test(groups = {"sanity"})
+    //@Test(groups = {"sanity"})
+    @Test
     public void testPDP() {
         OpenMRSLoginPage loginPage = OpenMRSLoginPage.getInstance(driver);
         loginPage.login("admin","Admin123");
     }
 
-    @AfterClass
-    public void tearDown() throws InterruptedException {
-        System.out.println("Terminating...");
-        sleep(3000);
-        driver.close();
-        driver.quit();
-    }
+//    @AfterClass
+//    public void tearDown() throws InterruptedException {
+//        System.out.println("Terminating...");
+//        sleep(3000);
+//        driver.close();
+//        driver.quit();
+//    }
+
+
 }

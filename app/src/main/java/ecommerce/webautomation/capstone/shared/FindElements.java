@@ -8,6 +8,7 @@ public class FindElements {
     private static FindElements elements = null;
     WebDriver driver = null;
 
+
     public FindElements(WebDriver driver) {
         this.driver = driver;
     }

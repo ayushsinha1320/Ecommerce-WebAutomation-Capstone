@@ -2,7 +2,6 @@ package ecommerce.webautomation.capstone.pages;
 
 import ecommerce.webautomation.capstone.shared.Actions;
 import ecommerce.webautomation.capstone.shared.FindElements;
-import ecommerce.webautomation.capstone.utils.ConfigReader;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -10,6 +9,7 @@ public class OpenMRSLoginPage {
     private static OpenMRSLoginPage loginPageInstance;
     private WebDriver driver;
     private FindElements findElements;
+    private Actions actions;
 
     private OpenMRSLoginPage(WebDriver driver) {
         this.driver = driver;
