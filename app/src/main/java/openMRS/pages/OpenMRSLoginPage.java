@@ -10,8 +10,6 @@ public class OpenMRSLoginPage {
     private WebDriver driver;
     private FindElements findElements;
     private Actions actions;
-    String userName;
-    String password;
 
     private OpenMRSLoginPage(WebDriver driver) {
         this.driver = driver;
@@ -41,20 +39,17 @@ public class OpenMRSLoginPage {
         actions.clickElement(location);
     }
 
-    public void clickLiginButton(){
+    public void clickLoginButton(){
         WebElement loginButton = findElements.ByCSS("#loginButton");
         actions.clickElement(loginButton);
     }
-
-
-
 
     public void login(String username, String password) {
 
         enterUserName(username);
         enterPassword(password);
         clickLocation();
-        clickLiginButton();
+        clickLoginButton();
     }
 
 }

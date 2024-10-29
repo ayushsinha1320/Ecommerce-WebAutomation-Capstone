@@ -25,17 +25,39 @@ public class OpenMRSManagePrivileges {
         return managePrivilegesInstance;
     }
 
-    public void managePrivileges(String username) {
+    public void clickConfigPrivileges(){
         WebElement configureMetadata = findElements.ByCSS("#org-openmrs-module-adminui-configuremetadata-homepageLink-org-openmrs-module-adminui-configuremetadata-homepageLink-extension");
-        WebElement managePrivileges = findElements.ByCSS("#org-openmrs-module-adminui-Privileges-org-openmrs-module-adminui-Privileges-extension");
-        WebElement addNewPrivileges = findElements.ByXPath("//input[@class=\"button\"]");
-        WebElement name = findElements.ByID("privilege-field");
-        WebElement submit = findElements.ByClass("confirm");
-
         actions.clickElement(configureMetadata);
+    }
+
+    public void clickManagePrivileges(){
+        WebElement managePrivileges = findElements.ByCSS("#org-openmrs-module-adminui-Privileges-org-openmrs-module-adminui-Privileges-extension");
         actions.clickElement(managePrivileges);
+
+    }
+
+    public void addNewPrivilege(){
+        WebElement addNewPrivileges = findElements.ByXPath("//input[@class=\"button\"]");
         actions.clickElement(addNewPrivileges);
-        name.sendKeys(username);
-        submit.click();
+
+    }
+
+    public void enterName(String privilegeName){
+        WebElement name = findElements.ByID("privilege-field");
+        actions.type(name,privilegeName);
+    }
+
+    public  void clickSubmit(){
+        WebElement submit = findElements.ByClass("confirm");
+        actions.clickElement(submit);
+
+    }
+
+    public void managePrivileges(String username) {
+        clickConfigPrivileges();
+        clickManagePrivileges();
+        addNewPrivilege();
+        enterName(username);
+        clickSubmit();
     }
 }

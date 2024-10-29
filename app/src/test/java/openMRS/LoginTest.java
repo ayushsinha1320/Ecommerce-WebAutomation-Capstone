@@ -7,7 +7,6 @@ import openMRS.utils.DriverCreator;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
 import static java.lang.Thread.sleep;
 
 public class LoginTest {
