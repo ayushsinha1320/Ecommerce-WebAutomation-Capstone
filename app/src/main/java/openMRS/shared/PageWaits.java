@@ -34,6 +34,9 @@ public class PageWaits {
     public WebElement waitUntilElementFoundByID(String elementID){
         return waitForElement().until(ExpectedConditions.visibilityOfElementLocated(By.id(elementID)));
     }
+    public WebElement waitUntilElementFoundByName(String elementName){
+        return waitForElement().until(ExpectedConditions.visibilityOfElementLocated(By.name(elementName)));
+    }
     public WebElement waitUntilElementFoundByCSS(String cssLocator){
         return waitForElement().until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(cssLocator)));
     }
