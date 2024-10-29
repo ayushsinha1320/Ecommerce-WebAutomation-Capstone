@@ -1,4 +1,4 @@
-package ecommerce.webautomation.capstone.utils;
+package openMRS.utils;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;

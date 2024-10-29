@@ -1,4 +1,4 @@
-package ecommerce.webautomation.capstone.utils;
+package openMRS.utils;
 
 
 public class ConfigReader {

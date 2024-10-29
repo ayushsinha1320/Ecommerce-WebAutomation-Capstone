@@ -1,11 +1,9 @@
-package ecommerce.webautomation.capstone.pages;
+package openMRS.pages;
 
-import ecommerce.webautomation.capstone.shared.Actions;
-import ecommerce.webautomation.capstone.shared.FindElements;
-import ecommerce.webautomation.capstone.shared.PageWaits;
+import openMRS.shared.Actions;
+import openMRS.shared.FindElements;
+import openMRS.shared.PageWaits;
 import org.openqa.selenium.WebDriver;
-
-import java.util.logging.Logger;
 
 public class CartPage {
     private WebDriver driver = null;
