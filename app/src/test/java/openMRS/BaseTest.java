@@ -26,5 +26,10 @@ public class BaseTest {
         sleep(3000);
         driver.close();
         driver.quit();
+
+
+
+
+
     }
 }
