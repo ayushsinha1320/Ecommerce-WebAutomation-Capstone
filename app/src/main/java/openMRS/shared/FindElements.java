@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 
 public class FindElements {
     private static FindElements elements = null;
-    WebDriver driver = null;
+    WebDriver driver;
 
 
     public FindElements(WebDriver driver) {
