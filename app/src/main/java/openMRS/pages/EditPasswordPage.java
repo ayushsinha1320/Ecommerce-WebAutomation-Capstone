@@ -27,17 +27,17 @@ public class EditPasswordPage {
     }
 
     private void enterOldPassword(String OldPassword){
-        this.waits.waitUntilElementFoundByID("oldPassword-Field");
+        this.waits.waitUntilElementFoundByID("oldPassword-field");
         WebElement oldPasswordField = findElements.ByID("oldPassword-field");
         actions.type(oldPasswordField,OldPassword);
     }
     private void enterNewPassword(String NewPassword){
-        this.waits.waitUntilElementFoundByID("newPassword-Field");
+        this.waits.waitUntilElementFoundByID("newPassword-field");
         WebElement newPasswordField = findElements.ByID("newPassword-field");
         actions.type(newPasswordField,NewPassword);
     }
     private void enterConfirmPassword(String ConfirmPassword){
-        this.waits.waitUntilElementFoundByID("confirmPassword-Field");
+        this.waits.waitUntilElementFoundByID("confirmPassword-field");
         WebElement confirmPasswordField = findElements.ByID("confirmPassword-field");
         actions.type(confirmPasswordField,ConfirmPassword);
     }
@@ -47,7 +47,8 @@ public class EditPasswordPage {
         actions.clickElement(saveButtonLocator);
     }
 
-    private void editPassword(String OldPassword,String NewPassword){
+    public void editPassword(String OldPassword,String NewPassword){
+        actions.navigateTo("https://demo.openmrs.org/openmrs/adminui/myaccount/changePassword.page");
         enterOldPassword(OldPassword);
         enterNewPassword(NewPassword);
         enterConfirmPassword(NewPassword);
