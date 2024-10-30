@@ -9,16 +9,16 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import static java.lang.Thread.sleep;
 
-public class LoginTest {
-    WebDriver driver = null;
-    PageWaits waits = null;
+public class LoginTest  extends BaseTest{
+//    WebDriver driver ;
+//    PageWaits waits = null;
 
-    @BeforeClass
-    public void setup() {
-        this.driver = DriverCreator.instantiateDriver(ConfigReader.getBrowser());
-        driver.get(ConfigReader.getBaseURL());
-        //this.waits = PageWaits.getPageWaitsObject(this.driver);
-    }
+//    @BeforeClass
+//    public void setup() {
+//        this.driver = DriverCreator.instantiateDriver(ConfigReader.getBrowser());
+//        driver.get(ConfigReader.getBaseURL());
+//        //this.waits = PageWaits.getPageWaitsObject(this.driver);
+//    }
 
     //@Test(groups = {"sanity"})
     @Test

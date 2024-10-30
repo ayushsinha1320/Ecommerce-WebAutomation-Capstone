@@ -5,20 +5,22 @@ import openMRS.utils.ConfigReader;
 import openMRS.utils.DriverCreator;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeSuite;
 
 import static java.lang.Thread.sleep;
 
 public class BaseTest {
     WebDriver driver = null;
     PageWaits waits = null;
-    @BeforeClass
+    @BeforeSuite
     public void setup() {
         this.driver = DriverCreator.instantiateDriver(ConfigReader.getBrowser());
         driver.get(ConfigReader.getBaseURL());
         this.waits = PageWaits.getPageWaitsObject(this.driver);
     }
-    @AfterClass
+    @AfterSuite
     public void tearDown() throws InterruptedException {
         sleep(3000);
         driver.close();
