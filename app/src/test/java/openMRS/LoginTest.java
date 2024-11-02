@@ -1,42 +1,23 @@
 package openMRS;
 
+import openMRS.pages.HomePage;
 import openMRS.pages.OpenMRSLoginPage;
-import openMRS.shared.PageWaits;
-import openMRS.utils.ConfigReader;
-import openMRS.utils.DriverCreator;
-import org.openqa.selenium.WebDriver;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
-import static java.lang.Thread.sleep;
+import org.testng.Assert;
+import org.testng.annotations.*;
 
-public class LoginTest  extends BaseTest{
-//    WebDriver driver ;
-//    PageWaits waits = null;
+public class LoginTest extends BaseTest{
 
-//    @BeforeClass
-//    public void setup() {
-//        this.driver = DriverCreator.instantiateDriver(ConfigReader.getBrowser());
-//        driver.get(ConfigReader.getBaseURL());
-//        //this.waits = PageWaits.getPageWaitsObject(this.driver);
-//    }
-
-    //@Test(groups = {"sanity"})
     @Test
-    public void testPDP() {
+    public void loginTest() {
         OpenMRSLoginPage loginPage = OpenMRSLoginPage.getInstance(driver);
         loginPage.login("admin","Admin123");
-
-
-
+        HomePage homePage = HomePage.getInstance(driver);
+        String actualTitle = homePage.homePage();
+        String expectedTitle = "Home";
+        Assert.assertEquals(actualTitle,expectedTitle);
+        loginPage.logout();
     }
-
-//    @AfterClass
-//    public void tearDown() throws InterruptedException {
-//        System.out.println("Terminating...");
-//        sleep(3000);
-//        driver.close();
-//        driver.quit();
-//    }
-
-
+    /*
+        PLEASE WRITE A AFTER_CLASS ANNOTATION TO IMPLEMENT LOGOUT METHOD
+     */
 }
