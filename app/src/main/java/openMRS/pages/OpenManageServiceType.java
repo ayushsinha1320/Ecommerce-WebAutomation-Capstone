@@ -55,7 +55,7 @@ public class OpenManageServiceType {
 
     }
 
-    public void manageServiceType(String name,String duration) throws InterruptedException {
+    public void manageServiceType(String name,String duration){
         clickAppointmentScheduling();
         clickManageServiceType();
         editManageServiceType(name,duration);
