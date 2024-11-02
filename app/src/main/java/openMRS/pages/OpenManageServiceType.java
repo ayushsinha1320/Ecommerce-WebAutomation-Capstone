@@ -7,8 +7,8 @@ import org.openqa.selenium.WebElement;
 
 public class OpenManageServiceType {
     private static OpenManageServiceType manageServiceType;
-    private FindElements findElements;
-    private Actions actions;
+    private final FindElements findElements;
+    private final Actions actions;
 
     public OpenManageServiceType(WebDriver driver) {
         this.findElements = FindElements.getInstance(driver);
