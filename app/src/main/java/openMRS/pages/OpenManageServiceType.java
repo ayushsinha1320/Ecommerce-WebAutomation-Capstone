@@ -23,8 +23,8 @@ public class OpenManageServiceType {
     }
 
     public void clickAppointmentScheduling(){
-        WebElement appointmentSechedule = findElements.ByCSS("#appointmentschedulingui-homeAppLink-appointmentschedulingui-homeAppLink-extension");
-        actions.clickElement(appointmentSechedule);
+        WebElement appointmentSchedule = findElements.ByCSS("#appointmentschedulingui-homeAppLink-appointmentschedulingui-homeAppLink-extension");
+        actions.clickElement(appointmentSchedule);
     }
 
     public void clickManageServiceType(){
