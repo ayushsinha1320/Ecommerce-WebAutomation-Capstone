@@ -11,6 +11,7 @@ public class OpenMRSTest {
     public void setup(){
         baseTest.setup();
     }
+
     @BeforeClass
     public void checkLogin() {
         OpenMRSLoginPage loginPage = OpenMRSLoginPage.getInstance(baseTest.driver);
