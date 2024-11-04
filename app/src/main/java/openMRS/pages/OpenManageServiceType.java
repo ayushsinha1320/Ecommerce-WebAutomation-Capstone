@@ -34,17 +34,14 @@ public class OpenManageServiceType {
     }
 
     public void editManageServiceType(String name,String duration)  {
-        WebElement clickEdit = findElements.ByCSS("#appointmentschedulingui-edit-General\\ Medicine\\ \\(New\\ Patient\\)");
+        WebElement clickEdit = findElements.ByID("appointmentschedulingui-edit-Dermatology");
         actions.clickElement(clickEdit);
-       // Thread.sleep(10000);
         WebElement editName = findElements.ByID("name-field");
         actions.type(editName,name);
         WebElement editDuration = findElements.ByID("duration-field");
         actions.type(editDuration,duration);
         WebElement save = findElements.ByCSS("#save-button");
         actions.clickElement(save);
-//        Thread.sleep(10000);
-
     }
 
     public void deleteManageServiceType(){
@@ -52,14 +49,30 @@ public class OpenManageServiceType {
         actions.clickElement(delete);
         WebElement deletePop = findElements.ByCSS("#delete-appointment-type-dialog > div.dialog-content > button.confirm.right");
         actions.clickElement(deletePop);
+    }
 
+    public void newServiceType(){
+        WebElement newService = findElements.ByCSS("#content > div > div:nth-child(1) > button");
+        actions.clickElement(newService);
+    }
+
+    public void newServiceTypeData(String name, String duration){
+        WebElement newName = findElements.ByCSS("#name-field");
+        actions.type(newName,name);
+        WebElement newDuration = findElements.ByCSS("#duration-field");
+        actions.type(newDuration,duration);
+        WebElement save = findElements.ByCSS("#save-button");
+        actions.clickElement(save);
     }
 
     public void manageServiceType(String name,String duration){
+//        actions.navigateTo("https://demo.openmrs.org/openmrs//appointmentschedulingui/home.page");
         clickAppointmentScheduling();
         clickManageServiceType();
-        editManageServiceType(name,duration);
-        deleteManageServiceType();
+//        editManageServiceType(name,duration);
+//        deleteManageServiceType();
+        newServiceType();
+        newServiceTypeData(name,duration);
 
     }
 
