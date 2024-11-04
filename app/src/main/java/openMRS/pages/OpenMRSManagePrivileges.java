@@ -53,11 +53,13 @@ public class OpenMRSManagePrivileges {
 
     }
 
-    public void managePrivileges(String username) {
+    public void managePrivileges(String username) throws InterruptedException {
         clickConfigPrivileges();
         clickManagePrivileges();
         addNewPrivilege();
         enterName(username);
         clickSubmit();
+        Thread.sleep(3000);
+        actions.navigateTo("https://demo.openmrs.org/openmrs/referenceapplication/home.page");
     }
 }
