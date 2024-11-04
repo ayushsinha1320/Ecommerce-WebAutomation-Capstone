@@ -9,41 +9,37 @@ public class OpenMRSTest extends BaseTest{
     private final String currentPassword = "Testing@321";
     OpenMRSLoginPage loginPage = OpenMRSLoginPage.getInstance(driver);
 
-    @BeforeTest
+    @BeforeClass
     public void Login() {
 //        loginPage.login("testuser",currentPassword);
         loginPage.login("admin","Admin123");
 
     }
-    @AfterTest
-    public void logout(){
-        loginPage.logout();
-    }
 
-    @Test
+    @Test(priority = 1)
     public void HomePageTitleTest(){
         HomePage homePage = HomePage.getInstance(driver);
         String actualTitle = homePage.homePage();
         String expectedTitle = "Home";
         Assert.assertEquals(actualTitle,expectedTitle);
     }
-//    @Test
-//    public void testRegisterPatient() {
-//        RegisterPatientPage registerPatientPage = RegisterPatientPage.getInstance(driver);
-//        registerPatientPage.RegisterPatient("Ayush","Sinha","Male","1","June","2000","Jamshedpur");
-//    }
+    @Test(priority = 2)
+    public void testRegisterPatient() {
+        RegisterPatientPage registerPatientPage = RegisterPatientPage.getInstance(driver);
+        registerPatientPage.RegisterPatient("Ayush","Sinha","Male","1","June","2000","Jamshedpur");
+    }
 
-    @Test
+    @Test(priority = 4)
     public void testMST() throws InterruptedException {
         OpenManageServiceType openManageServiceType = OpenManageServiceType.getInstance(driver);
         openManageServiceType.manageServiceType("Medicine","10");
     }
 
-//    @Test
-//    public void testMPT() {
-//        OpenMRSManagePrivileges managePrivileges = OpenMRSManagePrivileges.getInstance(driver);
-//        managePrivileges.managePrivileges("Allergy in Skin");
-//    }
+    @Test(priority = 3)
+    public void testMPT() {
+        OpenMRSManagePrivileges managePrivileges = OpenMRSManagePrivileges.getInstance(driver);
+        managePrivileges.managePrivileges("Allergy in Skin");
+    }
 
 //    @Test
 //    public void EditPasswordTest(){
@@ -57,4 +53,8 @@ public class OpenMRSTest extends BaseTest{
 //        String expected = "My Account";
 //        Assert.assertEquals(actual,expected);
 //    }
+    @AfterClass
+    public void logout(){
+        loginPage.logout();
+    }
 }
