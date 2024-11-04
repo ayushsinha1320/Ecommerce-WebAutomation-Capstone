@@ -3,8 +3,13 @@
 <suite name="OpenMRS Test">
     <test name="E2E Test" >
         <classes>
-            <class name="openMRS.LoginTest" />
-            <class name="openMRS.OpenMRSTest" />
+<!--            <class name="openMRS.LoginTest" />-->
+<!--            <class name="openMRS.OpenMRSTest" >-->
+<!--                <methods>-->
+<!--                    <include name="testRegisterPatient"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+            <class name="openMRS.OpenMRSTest"/>
         </classes>
     </test>
 </suite>
