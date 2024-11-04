@@ -76,7 +76,7 @@ public class RegisterPatientPage {
         actions.clickElement(element);
     }
 
-    public void RegisterPatient(String GivenName,String FamilyName,String Gender,String Date,String Month,String Year,String City){
+    public void RegisterPatient(String GivenName,String FamilyName,String Gender,String Date,String Month,String Year,String City) throws InterruptedException {
 
         WebElement RegisterAPatientElement = findElements.ByID("referenceapplication-registrationapp-registerPatient-homepageLink-referenceapplication-registrationapp-registerPatient-homepageLink-extension");
         RegisterAPatientElement.click();
@@ -95,5 +95,7 @@ public class RegisterPatientPage {
         ClickTheElementByID("next-button");
         ClickTheElementByID("next-button");
         ClickTheElementByID("submit");
+        Thread.sleep(5000);
+        actions.navigateTo("https://demo.openmrs.org/openmrs/referenceapplication/home.page");
     }
 }

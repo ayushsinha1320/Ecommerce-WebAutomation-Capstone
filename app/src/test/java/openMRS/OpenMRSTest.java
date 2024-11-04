@@ -24,7 +24,7 @@ public class OpenMRSTest extends BaseTest{
         Assert.assertEquals(actualTitle,expectedTitle);
     }
     @Test(priority = 2)
-    public void testRegisterPatient() {
+    public void testRegisterPatient() throws InterruptedException {
         RegisterPatientPage registerPatientPage = RegisterPatientPage.getInstance(driver);
         registerPatientPage.RegisterPatient("Ayush","Sinha","Male","1","June","2000","Jamshedpur");
     }
@@ -36,7 +36,7 @@ public class OpenMRSTest extends BaseTest{
     }
 
     @Test(priority = 3)
-    public void testMPT() {
+    public void testMPT() throws InterruptedException {
         OpenMRSManagePrivileges managePrivileges = OpenMRSManagePrivileges.getInstance(driver);
         managePrivileges.managePrivileges("Allergy in Skin");
     }

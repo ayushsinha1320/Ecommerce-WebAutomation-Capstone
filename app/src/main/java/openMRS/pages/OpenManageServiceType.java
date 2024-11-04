@@ -73,7 +73,7 @@ public class OpenManageServiceType {
 //        deleteManageServiceType();
         newServiceType();
         newServiceTypeData(name,duration);
-
+        actions.navigateTo("https://demo.openmrs.org/openmrs/referenceapplication/home.page");
     }
 
 
