@@ -7,8 +7,8 @@ import org.openqa.selenium.WebElement;
 
 public class OpenManageServiceType {
     private static OpenManageServiceType manageServiceType;
-    private FindElements findElements;
-    private Actions actions;
+    private final FindElements findElements;
+    private final Actions actions;
 
     public OpenManageServiceType(WebDriver driver) {
         this.findElements = FindElements.getInstance(driver);
@@ -23,8 +23,8 @@ public class OpenManageServiceType {
     }
 
     public void clickAppointmentScheduling(){
-        WebElement appointmentSechedule = findElements.ByCSS("#appointmentschedulingui-homeAppLink-appointmentschedulingui-homeAppLink-extension");
-        actions.clickElement(appointmentSechedule);
+        WebElement appointmentSchedule = findElements.ByCSS("#appointmentschedulingui-homeAppLink-appointmentschedulingui-homeAppLink-extension");
+        actions.clickElement(appointmentSchedule);
     }
 
     public void clickManageServiceType(){
@@ -55,7 +55,7 @@ public class OpenManageServiceType {
 
     }
 
-    public void manageServiceType(String name,String duration) throws InterruptedException {
+    public void manageServiceType(String name,String duration){
         clickAppointmentScheduling();
         clickManageServiceType();
         editManageServiceType(name,duration);

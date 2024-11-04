@@ -7,12 +7,10 @@ import org.openqa.selenium.WebElement;
 
 public class OpenMRSLoginPage {
     private static OpenMRSLoginPage loginPageInstance;
-    private WebDriver driver;
-    private FindElements findElements;
-    private Actions actions;
+    private final FindElements findElements;
+    private final Actions actions;
 
     private OpenMRSLoginPage(WebDriver driver) {
-        this.driver = driver;
         this.findElements = FindElements.getInstance(driver);
         this.actions = Actions.getActionsObject(driver);
     }
@@ -24,32 +22,36 @@ public class OpenMRSLoginPage {
         return loginPageInstance;
     }
 
-    public void enterUserName(String userName){
+    private void enterUserName(String userName){
         WebElement usernameField = findElements.ByCSS("#username");
 
         actions.type(usernameField, userName);
     }
-    public void enterPassword(String password){
+    private void enterPassword(String password){
         WebElement passwordField = findElements.ByCSS("#password");
         actions.type(passwordField, password);
     }
 
-    public void clickLocation(){
+    private void clickLocation(){
         WebElement location = findElements.ByCSS("#Inpatient\\ Ward");
         actions.clickElement(location);
     }
 
-    public void clickLoginButton(){
+    private void clickLoginButton(){
         WebElement loginButton = findElements.ByCSS("#loginButton");
         actions.clickElement(loginButton);
     }
 
     public void login(String username, String password) {
-
         enterUserName(username);
         enterPassword(password);
         clickLocation();
         clickLoginButton();
+    }
+
+    public void logout(){
+        WebElement logoutButton = findElements.ByXPath("//div[@id='navbarSupportedContent']/ul/li[3]/a");
+        actions.clickElement(logoutButton);
     }
 
 }

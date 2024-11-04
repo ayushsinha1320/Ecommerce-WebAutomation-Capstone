@@ -1,14 +1,9 @@
 package openMRS;
 
 import openMRS.shared.PageWaits;
-import openMRS.utils.ConfigReader;
-import openMRS.utils.DriverCreator;
+import openMRS.utils.*;
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeSuite;
-
+import org.testng.annotations.*;
 import static java.lang.Thread.sleep;
 
 public class BaseTest {
