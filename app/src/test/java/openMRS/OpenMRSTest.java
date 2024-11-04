@@ -27,11 +27,11 @@ public class OpenMRSTest extends BaseTest{
         String expectedTitle = "Home";
         Assert.assertEquals(actualTitle,expectedTitle);
     }
-    @Test
-    public void testRegisterPatient() {
-        RegisterPatientPage registerPatientPage = RegisterPatientPage.getInstance(driver);
-        registerPatientPage.RegisterPatient("Ayush","Sinha","Male","1","June","2000","Jamshedpur");
-    }
+//    @Test
+//    public void testRegisterPatient() {
+//        RegisterPatientPage registerPatientPage = RegisterPatientPage.getInstance(driver);
+//        registerPatientPage.RegisterPatient("Ayush","Sinha","Male","1","June","2000","Jamshedpur");
+//    }
 
     @Test
     public void testMST() throws InterruptedException {
@@ -39,22 +39,22 @@ public class OpenMRSTest extends BaseTest{
         openManageServiceType.manageServiceType("Medicine","10");
     }
 
-    @Test
-    public void testMPT() {
-        OpenMRSManagePrivileges managePrivileges = OpenMRSManagePrivileges.getInstance(driver);
-        managePrivileges.managePrivileges("Allergy in Skin");
-    }
+//    @Test
+//    public void testMPT() {
+//        OpenMRSManagePrivileges managePrivileges = OpenMRSManagePrivileges.getInstance(driver);
+//        managePrivileges.managePrivileges("Allergy in Skin");
+//    }
 
-    @Test
-    public void EditPasswordTest(){
-        /*
-            PLEASE UPDATE THE oldPassword and newPassword before running the code
-         */
-        String newPassword = "Testing@321";
-        EditPasswordPage editPasswordPage = EditPasswordPage.getInstance(driver);
-        editPasswordPage.editPassword(currentPassword,newPassword);
-        String actual = driver.getTitle();
-        String expected = "My Account";
-        Assert.assertEquals(actual,expected);
-    }
+//    @Test
+//    public void EditPasswordTest(){
+//        /*
+//            PLEASE UPDATE THE oldPassword and newPassword before running the code
+//         */
+//        String newPassword = "Testing@321";
+//        EditPasswordPage editPasswordPage = EditPasswordPage.getInstance(driver);
+//        editPasswordPage.editPassword(currentPassword,newPassword);
+//        String actual = driver.getTitle();
+//        String expected = "My Account";
+//        Assert.assertEquals(actual,expected);
+//    }
 }

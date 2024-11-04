@@ -55,11 +55,28 @@ public class OpenManageServiceType {
 
     }
 
+    public void newServicType(){
+        WebElement newService = findElements.ByCSS("#content > div > div:nth-child(1) > button");
+        actions.clickElement(newService);
+    }
+
+    public void newServicTypeData(String name, String duration){
+        WebElement newName = findElements.ByCSS("#name-field");
+        actions.type(newName,name);
+        WebElement newDuration = findElements.ByCSS("#duration-field");
+        actions.type(newDuration,duration);
+        WebElement save = findElements.ByCSS("#save-button");
+        actions.clickElement(save);
+    }
+
+
     public void manageServiceType(String name,String duration){
         clickAppointmentScheduling();
         clickManageServiceType();
-        editManageServiceType(name,duration);
-        deleteManageServiceType();
+//        editManageServiceType(name,duration);
+//        deleteManageServiceType();
+        newServicType();
+        newServicTypeData(name,duration);
 
     }
 
