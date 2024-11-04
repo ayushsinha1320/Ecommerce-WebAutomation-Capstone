@@ -11,7 +11,9 @@ public class OpenMRSTest extends BaseTest{
 
     @BeforeTest
     public void Login() {
-        loginPage.login("testuser",currentPassword);
+//        loginPage.login("testuser",currentPassword);
+        loginPage.login("admin","Admin123");
+
     }
     @AfterTest
     public void logout(){
