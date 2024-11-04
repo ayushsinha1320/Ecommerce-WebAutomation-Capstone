@@ -76,6 +76,22 @@ public class RegisterPatientPage {
         actions.clickElement(element);
     }
 
+    public void deletePatientByName(String name) throws InterruptedException {
+        actions.navigateTo("https://demo.openmrs.org/openmrs/coreapps/findpatient/findPatient.page?app=coreapps.findPatient");
+        WebElement searchBox = findElements.ByID("patient-search");
+        actions.type(searchBox,name);
+        WebElement patient = findElements.ByXPath("//tr[@class=\"odd\"]");
+        actions.clickElement(patient);
+        WebElement deleteText = findElements.ByXPath("//*[@id=\"org.openmrs.module.coreapps.deletePatient\"]/div/div[2]");
+        actions.clickElement(deleteText);
+        WebElement deleteReasonTextBox = findElements.ByID("delete-reason");
+        actions.type(deleteReasonTextBox,"testing");
+        WebElement confirmButton = findElements.ByXPath("//*[@id=\"delete-patient-creation-dialog\"]/div[2]/button[1]");
+        actions.clickElement(confirmButton);
+        Thread.sleep(5000);
+        actions.navigateTo("https://demo.openmrs.org/openmrs/referenceapplication/home.page");
+    }
+
     public void RegisterPatient(String GivenName,String FamilyName,String Gender,String Date,String Month,String Year,String City) throws InterruptedException {
 
         WebElement RegisterAPatientElement = findElements.ByID("referenceapplication-registrationapp-registerPatient-homepageLink-referenceapplication-registrationapp-registerPatient-homepageLink-extension");
