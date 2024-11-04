@@ -1,7 +1,7 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 
-<suite name="E2E Test">
-    <test name="Login Test" >
+<suite name="OpenMRS Test">
+    <test name="E2E Test" >
         <classes>
             <class name="openMRS.LoginTest" />
             <class name="openMRS.OpenMRSTest" />

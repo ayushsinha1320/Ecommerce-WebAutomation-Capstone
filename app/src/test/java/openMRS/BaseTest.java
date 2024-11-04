@@ -7,11 +7,10 @@ import org.testng.annotations.*;
 import static java.lang.Thread.sleep;
 
 public class BaseTest {
-    WebDriver driver = null;
+    WebDriver driver = DriverCreator.instantiateDriver(ConfigReader.getBrowser());;
     PageWaits waits = null;
     @BeforeSuite
     public void setup() {
-        this.driver = DriverCreator.instantiateDriver(ConfigReader.getBrowser());
         driver.get(ConfigReader.getBaseURL());
         this.waits = PageWaits.getPageWaitsObject(this.driver);
     }
