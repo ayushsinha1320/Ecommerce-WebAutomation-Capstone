@@ -16,26 +16,27 @@ public class OpenMRSTest extends BaseTest{
 
     }
 
-    @Test(priority = 1)
+    @Test
     public void HomePageTitleTest(){
         HomePage homePage = HomePage.getInstance(driver);
         String actualTitle = homePage.homePage();
         String expectedTitle = "Home";
         Assert.assertEquals(actualTitle,expectedTitle);
     }
-    @Test(priority = 2)
+    @Test
     public void testRegisterPatient() throws InterruptedException {
         RegisterPatientPage registerPatientPage = RegisterPatientPage.getInstance(driver);
         registerPatientPage.RegisterPatient("Ayush","Sinha","Male","1","June","2000","Jamshedpur");
+        registerPatientPage.deletePatientByName("ayush");
     }
 
-    @Test(priority = 4)
+    @Test
     public void testMST() throws InterruptedException {
         OpenManageServiceType openManageServiceType = OpenManageServiceType.getInstance(driver);
         openManageServiceType.manageServiceType("Medicine","10");
     }
 
-    @Test(priority = 3)
+    @Test
     public void testMPT() throws InterruptedException {
         OpenMRSManagePrivileges managePrivileges = OpenMRSManagePrivileges.getInstance(driver);
         managePrivileges.managePrivileges("Allergy in Skin");
